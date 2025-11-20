@@ -1,4 +1,4 @@
-import useCounter from "./src/hooks/useCounter";
+import useCounter from "./hooks/useCounter";
 
 function Counter(){
     const { count, increment, decrement, reset } = useCounter(5)
