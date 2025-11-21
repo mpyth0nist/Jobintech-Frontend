@@ -21,18 +21,23 @@ function App() {
   
   // Exercise 3
 
-  let [value, setValue] = useState(0)
+  // let [value, setValue] = useState(0)
 
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setValue(v => v + 1)
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setValue(v => v + 1)
     
-    }, 1000)
+  //   }, 1000)
 
-    return () => clearInterval(timer);
+  //   return () => clearInterval(timer);
 
-  }, [])
+  // }, [])
+
+
+  // Exercise 4
+
+  
 
 
   
