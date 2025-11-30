@@ -7,20 +7,16 @@ export default function Article(){
 
     const { id } = useParams()
 
-    const navigate = useNavigate()
 
     const allArticles = articles
 
     let selectedArticle = allArticles.filter(article => article.id === Number(id))[0]
 
-    let isLong = selectedArticle.contenu.length
+    let isLong = selectedArticle?.contenu.length
 
     let [showLong, setShowLong] = useState(false)
-
-    useEffect(() => {
-        console.log('called')
-        console.log(selectedArticle)
-    }, [selectedArticle])
+    
+    const navigate = useNavigate()
 
     return (
         <>
@@ -57,7 +53,7 @@ export default function Article(){
                     </>
                 }
 
-                <button className="text-white text-lg p-[0.7em] bg-violet-700 rounded-full hover:bg-violet-900 hover:scale-120 duration-500 " onClick={() => navigate(`comments`)}>View Comments</button>
+                <button className="text-white text-lg p-[0.7em] bg-violet-700 rounded-full hover:bg-violet-900 hover:scale-120 cursor-pointer duration-500 " onClick={() => navigate(`comments`)}>View Comments</button>
 
             </article>
 
@@ -65,7 +61,7 @@ export default function Article(){
             :
             <div>
                 <h2>Article Introuvable</h2>
-                <button><Link to="articles">Retour aux articles</Link></button>
+                <button onClick={() => navigate('/articles', {replace: true})}>Retour aux articles</button>
             </div>
 
         }

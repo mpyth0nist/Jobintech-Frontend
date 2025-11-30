@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 
 function Home() {
-  const navigate = () => {}; // placeholder
+  const navigate = useNavigate()
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
@@ -18,8 +18,8 @@ function Home() {
         </p>
 
         <button
-          onClick={() => navigate('articles')}
-          className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105 active:scale-95"
+          onClick={() => navigate('/articles')}
+          className="px-8 py-4 bg-gradient-to-r cursor-pointer from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105 active:scale-95"
         >
           Voir les articles
         </button>

@@ -19,7 +19,7 @@ function AppRoutes(){
                     <Route path="contact" element={<Contact />} />
 
                     <Route path="articles" element={<Articles />}>
-                    <Route index element={<p>Selectionnez un article</p>} />
+                    <Route index element={<p className="text-white font-bold text-xl">Selectionnez un article</p>} />
                     <Route path=":id" element={<Article />} />
                     <Route path=":id/comments" element={<ArticleComments /> } />
                     <Route path="*" element={<p>Section Articles: Page Introuvable</p>}/>                    
